@@ -12,7 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Servir imagens estáticas legadas
+// Servir interface web e imagens estáticas
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/img', express.static(path.join(__dirname, '..', 'public', 'images')));
 app.use('/images', express.static(path.join(__dirname, '..', 'public', 'images')));
 
@@ -20,21 +21,9 @@ app.use('/images', express.static(path.join(__dirname, '..', 'public', 'images')
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.get('/docs', (req, res) => res.redirect('/api-docs'));
 
-// Rota raiz de boas-vindas com orientações
+// Página principal do blog
 app.get('/', (req, res) => {
-  res.json({
-    name: 'API Fake Blog - Versão 2.0',
-    description: 'API refatorada com arquitetura MVC, Supabase (PostgreSQL) e Swagger',
-    documentation: '/api-docs',
-    endpoints: {
-      listarTodas: 'GET /postagens',
-      buscarPorId: 'GET /postagens/:id',
-      criar: 'POST /postagens',
-      atualizar: 'PUT /postagens/:id',
-      deletar: 'DELETE /postagens/:id',
-      categoriaGames: 'GET /categoria/games'
-    }
-  });
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 // Rotas da API

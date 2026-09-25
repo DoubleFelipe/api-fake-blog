@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f0e8" />
+  <meta name="description" content="Um blog de cultura, ideias e coisas que merecem ser lidas." />
+  <title>FORA DA LINHA — Blog de cultura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <a class="wordmark" href="#inicio" aria-label="Fora da Linha, início">FORA<span>DA</span>LINHA<sup>®</sup></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#ultimas">LEITURAS</a><a href="#manifesto">MANIFESTO</a><a href="/api-docs">API ↗</a>
+    </nav>
+    <a class="top-cta" href="#ultimas">ENTRE NA CONVERSA <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-topline"><span>PUBLICAÇÃO INDEPENDENTE · EST. 2024</span><span class="live"><i></i> AO VIVO NA SUA CABEÇA</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">UM BLOG SOBRE O AGORA (E O QUASE)</p>
+          <h1 id="hero-title">IDEIAS<br/>FORA <em>da</em><br/><span>LINHA<span class="period">.</span></span></h1>
+          <div class="hero-foot"><p>Para quem pensa demais,<br/>sente tudo e rola até o fim.</p><a class="round-link" href="#ultimas" aria-label="Ver últimas leituras">↓</a></div>
+        </div>
+        <div class="hero-art" aria-label="Composição gráfica abstrata em amarelo, rosa e preto">
+          <div class="art-sun"></div><div class="art-disc"><span>F</span></div><div class="art-orbit"></div>
+          <span class="art-note note-one">ISS. Nº 08<br/>SEM FILTRO</span><span class="art-note note-two">CULTURA<br/>EM MOVIMENTO ↗</span>
+          <span class="art-star" aria-hidden="true">✳</span><span class="art-caption">PENSAR É UM<br/>ESPORTE RADICAL.</span>
+          <div class="art-sticker">LEIA<br/>ISSO<br/>AQUI</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span>ARRASTE PARA PENSAR ↓</span><span>EDIÇÃO Nº 008 — SETEMBRO 2026</span><span>22°54′ S / 43°12′ W</span></div>
+    </section>
+
+    <div class="ticker" aria-label="Cultura, ideias e conversas sem pedir licença"><div class="ticker-track" aria-hidden="true">CULTURA SEM PEDIR LICENÇA <b>✳</b> IDEIAS QUE FAZEM BARULHO <b>✳</b> LEIA, QUESTIONE, REPITA <b>✳</b> CULTURA SEM PEDIR LICENÇA <b>✳</b> IDEIAS QUE FAZEM BARULHO <b>✳</b> LEIA, QUESTIONE, REPITA <b>✳</b></div></div>
+
+    <section class="latest section-wrap" id="ultimas" aria-labelledby="latest-title">
+      <div class="section-heading"><div><p class="eyebrow">NOVIDADES DO FRONT</p><h2 id="latest-title">ÚLTIMAS <em>leituras</em><span class="period">.</span></h2></div><span class="issue-tag">O QUE ESTÁ<br/>NA CABEÇA ↓</span></div>
+      <div class="toolbar"><div class="filters" role="group" aria-label="Filtrar por categoria"><button class="filter is-active" type="button" data-category="all" aria-pressed="true">TUDO <span>✳</span></button><button class="filter" type="button" data-category="games" aria-pressed="false">GAMES</button><button class="filter" type="button" data-category="tecnologia" aria-pressed="false">TECH</button><button class="filter" type="button" data-category="cultura" aria-pressed="false">CULTURA</button><button class="filter" type="button" data-category="design" aria-pressed="false">DESIGN</button></div><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar leituras</span><input id="search" type="search" placeholder="BUSCAR UMA IDEIA..." /></label></div>
+      <p class="status-line" id="feed-status" aria-live="polite">CARREGANDO IDEIAS...</p>
+      <div class="post-grid" id="post-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span>OPS! NENHUMA IDEIA POR AQUI.</span><button id="clear-filters" type="button">LIMPAR FILTROS ↗</button></div>
+    </section>
+
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title"><div class="manifesto-mark" aria-hidden="true">✳</div><p class="eyebrow">NOSSO PEQUENO MANIFESTO</p><h2 id="manifesto-title">NÃO PRECISA<br/>CABER EM <em>caixa</em><span>.</span></h2><div class="manifesto-bottom"><p>A gente acredita em curiosidade sem algoritmo, conversa sem pressa e ideias que não cabem em 280 caracteres. O resto a gente descobre junto.</p><a href="#ultimas">CONTINUE LENDO ↗</a></div><span class="manifesto-annotation">SEM CERIMÔNIA,<br/>COM INTENÇÃO.</span></section>
+  </main>
+  <footer class="footer"><a class="wordmark" href="#inicio">FORA<span>DA</span>LINHA<sup>®</sup></a><span>FEITO COM CURIOSIDADE NO BRASIL 🇧🇷</span><a href="/api-docs">API & DOCUMENTAÇÃO ↗</a><span>© 2026 FORA DA LINHA</span></footer>
+
+  <dialog class="post-dialog" id="post-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Fechar leitura">×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
